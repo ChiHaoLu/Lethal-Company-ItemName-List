@@ -63,7 +63,9 @@ I decompile the `Lethal Company.exe` to get every class/var which is `GrabbableO
 
 #### Not Sure Item
 
-This list is internal variable in some object, but they are also `GrabbableObject`. If anyone has tried below item name and know it is useful or not, pls tell me.
+This list is internal variable in some object, but they are also `GrabbableObject`. For example, the [hive](https://github.com/ChiHaoLu/Lethal-Company-ItemName-List/blob/main/RedLocustBees.cs#L16) in the `RedLocustBees.cs`.
+
+If anyone has tried below item name and know it is useful or not, pls tell me.
 
 | Item Name | Trad.CH |
 |---|---|
