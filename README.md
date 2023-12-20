@@ -1,5 +1,6 @@
 # Lethal Company ItemName List
 
+If you interest in how to get the Item list, please refer [How to get Item List](#How-to-get-Item-List). If not, checking the [Item List](#Item-List) directly.
 
 ### Motivation
 
