@@ -68,13 +68,13 @@ Decompiling the `Lethal Company.exe` to get every class/var which is `GrabbableO
 2. Build and open the ILSpy GUI.
 4. Open Steam and right click the Lethal Company to get your game's file directory.
 5. Open the file `Assembly-CSharp.dll` which may in the path like `~\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll`.
-6. Export the C# code of `Assembly-CSharp.dll`.
+6. Export the C# code of `Assembly-CSharp.dll` to any where you want, e.g. folder `LCDecompile`.
 7. Open the C# project `Assembly-CSharp.cspj` in Visual Studio.
-8. Run the `FindItem.cs` to print the class or variable belonging `GrabbableObject`.
+8. Run the `FindItem.cs` to traverse `/LCDecompile` to print the class or variable belonging `GrabbableObject`.
 
 ### How does `FindItem.cs` work?
 
-The purpose of this code is to traverse all `.cs` files within a specified C# project path, searching for and printing two types of "GrabbableObject":
+The purpose of this code is to traverse all `.cs` files within a specified C# project path, searching for and printing two types of `GrabbableObject`:
 
 1. **GrabbableObject Classes:**
    - Utilizes the Roslyn C# syntax tree analysis tool.
@@ -90,13 +90,13 @@ The purpose of this code is to traverse all `.cs` files within a specified C# pr
 
 The execution steps of this code are as follows:
 
-1. Set the project path.
+1. Set the folder path.
 2. Use `Directory.GetFiles` to obtain paths for all `.cs` files.
 3. Use `CSharpSyntaxTree.ParseText` to convert the code of each file into a Roslyn syntax tree.
 4. Traverse each syntax tree, searching for class and variable declarations that meet the specified conditions.
 5. Print the names of classes and variables that meet the conditions.
 
-In summary, this code is designed to find and print the names of classes and variables related to "GrabbableObject" within a project.
+In summary, this code is designed to find and print the names of classes and variables related to `GrabbableObject` within a project folder.
 
 You can see there are some `var`/`class` name weird, I will try to solve it in the future in leisure time.
 
