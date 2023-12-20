@@ -20,7 +20,9 @@ I decompile the `Lethal Company.exe` to get every class/var which is `GrabbableO
 7. Open the C# project `Assembly-CSharp.cspj` in Visual Studio.
 8. Search the class or variable which belongs `GrabbableObject`.
 
-I am searching a new method that can automatically and easily get the items' name and all of their `class`. If anyone knows a better method, I'm all ears.
+> I am searching a new method that can automatically and easily get the items' name and all of their `class`. If anyone knows a better method, I'm all ears.
+> 
+> One method is storing the assembly `Assembly-CSharp.dll` as a variable in the C# program, and searching all defined `types`/`class` in it. Then we can specify the `GrabbableObject` and print all of related `class`/`var`.
 
 ### Item List
 
