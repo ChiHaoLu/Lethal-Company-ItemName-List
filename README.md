@@ -35,6 +35,72 @@ The execution steps of this code are as follows:
 
 In summary, this code is designed to find and print the names of classes and variables related to "GrabbableObject" within a project.
 
+You can see there are some `var`/`class` name weird, I will try to solve it in the future in leisure time.
+
+```
+Grabbable Objects found:
+AnimatedItem
+focusedScrap
+heldScrap
+grabbableObject
+grabbableObject
+component3
+BinocularsItem
+BoomboxItem
+ClipboardItem
+grabBodyObject
+ExtensionLadderItem
+FlashlightItem
+GiftBoxItem
+component
+component
+GunAmmo
+HauntedMaskItem
+targetItem
+component
+itemGrabbableObject
+component
+itemGrabbableObject
+currentlyHeldObjectServer
+JetpackItem
+KeyItem
+LockPicker
+LungProp
+MapDevice
+NoisemakerProp
+PatcherTool
+PhysicsProp
+RadarBoosterItem
+RagdollGrabbableObject
+attachedGrabbableObject
+hive
+RemoteProp
+component
+component
+ShotgunItem
+Shovel
+SprayPaintItem
+component
+component
+targetingMetalObject
+setStaticGrabbableObject
+component
+StunGrenadeItem
+TetraChemicalItem
+WalkieTalkie
+WhoopieCushionItem
+currentlyHeldObject
+currentlyGrabbingObject
+currentlyHeldObjectServer
+pocketedFlashlight
+component
+component
+grabbableObject
+grabbableObject
+grabbableObject
+component2
+```
+
 #### Method2
 
 Decompiling the `Lethal Company.exe` to get every class/var which is `GrabbableObject` with ILSpy.
