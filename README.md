@@ -98,7 +98,7 @@ The execution steps of this code are as follows:
 
 In summary, this code is designed to find and print the names of classes and variables related to `GrabbableObject` within a project folder.
 
-You can see there are some `var`/`class` name weird, I will try to solve it in the future in leisure time.
+You can see there are some `var`/`class` name weird, I will try to solve it in the future in leisure time. However, you can filter them by eyes haha!
 
 ```
 Grabbable Objects found:
