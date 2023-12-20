@@ -13,8 +13,9 @@ I decompile the decompile the `Lethal Company.exe` to get every class which is `
 2. Build and open the ILSpy GUI.
 4. Open Steam and right click the Lethal Company to get your game file directory.
 5. Open the file `Assembly-CSharp.dll` which may in the path like `~\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll`.
-6. Export the C# code of `Assembly-CSharp.dll`
-7. Search the class which is `GrabbableObject`.
+6. Export the C# code of `Assembly-CSharp.dll`.
+7. Open the C# project `Assembly-CSharp.cspj` in Visual Studio.
+8. Search the class which is `GrabbableObject`.
 
 I am searching a new method that can automatically and easily get the items' name and their `class`. If anyone has a better method, I'm all ears.
 
