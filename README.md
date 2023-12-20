@@ -3,25 +3,27 @@
 
 ### Motivation
 
-When people who don't know programming want to add/delete item in the mod's config, they are confused what item name should use.
+When people who don't know programming want to add/delete item in the mod's config, they are confused what item name should input.
+
+For example, user doesn't know how to add a new item [here](https://github.com/SirTyler/BetterTeleporter/blob/main/Plugin.cs#L256).
 
 ### How to get Item List
 
-I decompile the decompile the `Lethal Company.exe` to get every class which is `GrabbableObject` with ILSpy.
+I decompile the `Lethal Company.exe` to get every class/var which is `GrabbableObject` with ILSpy.
 
-1. Download the [ILSpy](https://github.com/icsharpcode/ILSpy) with Visual Studio (it may take 30min~ if you don't have both of them).
+1. Download the [ILSpy](https://github.com/icsharpcode/ILSpy) with Visual Studio(it may take 30min~ if you don't have both of them).
 2. Build and open the ILSpy GUI.
-4. Open Steam and right click the Lethal Company to get your game file directory.
+4. Open Steam and right click the Lethal Company to get your game's file directory.
 5. Open the file `Assembly-CSharp.dll` which may in the path like `~\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll`.
 6. Export the C# code of `Assembly-CSharp.dll`.
 7. Open the C# project `Assembly-CSharp.cspj` in Visual Studio.
-8. Search the class or variable which is `GrabbableObject`.
+8. Search the class or variable which belongs `GrabbableObject`.
 
-I am searching a new method that can automatically and easily get the items' name and their `class`. If anyone has a better method, I'm all ears.
+I am searching a new method that can automatically and easily get the items' name and all of their `class`. If anyone knows a better method, I'm all ears.
 
 ### Item List
 
-**In my speculation**, there may be several items classified under the same category. For example, both a regular Flashlight and a Pro Flashlight are defined within the `FlashlightItem` category. This is why some items have the suffix 'Item' while others do not.
+**In my speculation**, there may be several items classified under the same category. For example, both a Regular Flashlight and a Pro Flashlight are defined within the `FlashlightItem` category. This is why some items have the suffix `Item` while others do not.
 
 #### Sure Item
 | Item Name | Trad.CH |
