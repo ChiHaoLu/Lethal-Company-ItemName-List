@@ -32,10 +32,5 @@ I am searching a new method which can automatically decompile the `GrabbableObje
 |NoisemakerProp||
 |JetpackItem||
 |PatcherTool||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
+|ClipboardItem||
+
