@@ -1,6 +1,8 @@
 # Lethal Company ItemName List
 
-I am searching a new method which can automatically decompile the `GrabbableObject` in `Lethal Company.exe` with ILSPY. If anyone has a better method, I'm all ears.
+I am searching a new method which can automatically decompile the `GrabbableObject` in `Lethal Company.exe` with ILSPY. If anyone has a better method, I'm all ears. 
+
+**In my speculation**, there may be several items classified under the same category. For example, both a regular Flashlight and a Pro Flashlight are defined within the `FlashlightItem` category. This is why some items have the suffix 'Item' while others do not.
 
 | Item Name | Trad.CH |
 |---|---|
