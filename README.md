@@ -15,7 +15,7 @@ I decompile the decompile the `Lethal Company.exe` to get every class which is `
 5. Open the file `Assembly-CSharp.dll` which may in the path like `~\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll`.
 6. Export the C# code of `Assembly-CSharp.dll`.
 7. Open the C# project `Assembly-CSharp.cspj` in Visual Studio.
-8. Search the class which is `GrabbableObject`.
+8. Search the class or variable which is `GrabbableObject`.
 
 I am searching a new method that can automatically and easily get the items' name and their `class`. If anyone has a better method, I'm all ears.
 
@@ -23,6 +23,7 @@ I am searching a new method that can automatically and easily get the items' nam
 
 **In my speculation**, there may be several items classified under the same category. For example, both a regular Flashlight and a Pro Flashlight are defined within the `FlashlightItem` category. This is why some items have the suffix 'Item' while others do not.
 
+#### Sure Item
 | Item Name | Trad.CH |
 |---|---|
 |RagdollGrabbableObject|布娃娃可抓取物體|
@@ -55,3 +56,15 @@ I am searching a new method that can automatically and easily get the items' nam
 |PatcherTool|修補工具|
 |ClipboardItem|剪貼板物品|
 
+#### Not Sure Item
+
+This list is internal variable in some object, but they are also `GrabbableObject`. If anyone has tried below item name and know it is useful or not, pls tell me.
+
+| Item Name | Trad.CH |
+|---|---|
+|focusedScrap|集中的廢棄物|
+|heldScrap|持有的廢棄物|
+|grabBodyObject|抓取大體|
+|pocketedFlashlight|放入口袋的手電筒|
+|attachedGrabbableObject|附著的可抓取物體|
+|hive|蜂巢|
