@@ -10,7 +10,34 @@ For example, user doesn't know how to add a new item [here](https://github.com/S
 
 ### How to get Item List
 
-I decompile the `Lethal Company.exe` to get every class/var which is `GrabbableObject` with ILSpy.
+#### Method1
+The purpose of this code is to traverse all `.cs` files within a specified C# project path, searching for and printing two types of "GrabbableObject":
+
+1. **GrabbableObject Classes:**
+   - Utilizes the Roslyn C# syntax tree analysis tool.
+   - Iterates through each syntax tree, identifying all `ClassDeclarationSyntax`, i.e., class declarations.
+   - Filters out classes that inherit from "GrabbableObject" from these declarations.
+   - Prints the names of these classes.
+
+2. **GrabbableObject Variables:**
+   - Similarly uses the Roslyn C# syntax tree analysis tool.
+   - Iterates through each syntax tree, identifying all `VariableDeclarationSyntax`, i.e., variable declarations.
+   - Filters out variables of type "GrabbableObject" from these declarations.
+   - Prints the names of these variables.
+
+The execution steps of this code are as follows:
+
+1. Set the project path.
+2. Use `Directory.GetFiles` to obtain paths for all `.cs` files.
+3. Use `CSharpSyntaxTree.ParseText` to convert the code of each file into a Roslyn syntax tree.
+4. Traverse each syntax tree, searching for class and variable declarations that meet the specified conditions.
+5. Print the names of classes and variables that meet the conditions.
+
+In summary, this code is designed to find and print the names of classes and variables related to "GrabbableObject" within a project.
+
+#### Method2
+
+Decompiling the `Lethal Company.exe` to get every class/var which is `GrabbableObject` with ILSpy.
 
 1. Download the [ILSpy](https://github.com/icsharpcode/ILSpy) with Visual Studio(it may take 30min~ if you don't have both of them).
 2. Build and open the ILSpy GUI.
@@ -18,11 +45,7 @@ I decompile the `Lethal Company.exe` to get every class/var which is `GrabbableO
 5. Open the file `Assembly-CSharp.dll` which may in the path like `~\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll`.
 6. Export the C# code of `Assembly-CSharp.dll`.
 7. Open the C# project `Assembly-CSharp.cspj` in Visual Studio.
-8. Search the class or variable which belongs `GrabbableObject`.
-
-> I am searching a new method that can automatically and easily get the items' name and all of their `class`. If anyone knows a better method, I'm all ears.
-> 
-> One method is storing the assembly `Assembly-CSharp.dll` as a variable in the C# program, and searching all defined `types`/`class` in it. Then we can specify the `GrabbableObject` and print all of related `class`/`var`.
+8. Search the class or variable which belongs `GrabbableObject` with eyes haha.
 
 ### Item List
 
