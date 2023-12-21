@@ -29,7 +29,6 @@ For example, user doesn't know how to add a new item [here](https://github.com/S
 |SprayPaintItem|噴漆物品|
 |HauntedMaskItem|鬼面具物品|
 |RadarBoosterItem|雷達增強器物品|
-|Hive|蜂巢|
 |MapDevice|地圖裝置|
 |AnimatedItem|動畫物品|
 |StunGrenadeItem|閃光手榴彈物品|
