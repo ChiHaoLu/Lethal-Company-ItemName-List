@@ -62,7 +62,7 @@ If anyone has tried below item name and know it is useful or not, pls tell me.
 
 ### How to get item list
 
-Decompiling the `Lethal Company.exe` to get every class/var which is `GrabbableObject` with ILSpy.
+Decompiling **Lethal Company** to get every class/var which is `GrabbableObject` with ILSpy.
 
 1. Download the [ILSpy](https://github.com/icsharpcode/ILSpy) with Visual Studio(it may take 30min~ if you don't have both of them).
 2. Build and open the ILSpy GUI.
@@ -70,23 +70,16 @@ Decompiling the `Lethal Company.exe` to get every class/var which is `GrabbableO
 5. Open the file `Assembly-CSharp.dll` which may in the path like `~\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll`.
 6. Export the C# code of `Assembly-CSharp.dll` to any where you want, e.g. folder `LCDecompile`.
 7. Open the C# project `Assembly-CSharp.cspj` in Visual Studio.
-8. Run the `FindItem.cs` to traverse `/LCDecompile` to print the class or variable belonging `GrabbableObject`.
+8. Run the `FindItem.cs` to traverse `/LCDecompile` to print the classes or variables belonging `GrabbableObject`.
 
 ### How does `FindItem.cs` work?
 
 The purpose of this code is to traverse all `.cs` files within a specified C# project path, searching for and printing two types of `GrabbableObject`:
 
-1. **GrabbableObject Classes:**
-   - Utilizes the Roslyn C# syntax tree analysis tool.
-   - Iterates through each syntax tree, identifying all `ClassDeclarationSyntax`, i.e., class declarations.
-   - Filters out classes that inherit from "GrabbableObject" from these declarations.
-   - Prints the names of these classes.
-
-2. **GrabbableObject Variables:**
-   - Similarly uses the Roslyn C# syntax tree analysis tool.
-   - Iterates through each syntax tree, identifying all `VariableDeclarationSyntax`, i.e., variable declarations.
-   - Filters out variables of type "GrabbableObject" from these declarations.
-   - Prints the names of these variables.
+- Utilizes the [Roslyn](https://github.com/dotnet/roslyn) C# syntax tree analysis tool.
+- Iterates through each syntax tree, identifying all `ClassDeclarationSyntax`/`VariableDeclarationSyntax`.
+- Filters out classes/variables that inherit from `GrabbableObject` from these declarations.
+- Prints the names of these classes/variables.
 
 The execution steps of this code are as follows:
 
@@ -98,7 +91,7 @@ The execution steps of this code are as follows:
 
 In summary, this code is designed to find and print the names of classes and variables related to `GrabbableObject` within a project folder.
 
-You can see there are some `var`/`class` name weird, I will try to solve it in the future in leisure time. However, you can filter them by eyes haha!
+You can see there are some `var`/`class` name weird, I will try to solve it in the future in leisure time. However, you can roughly find them by eyes haha!
 
 ```
 Grabbable Objects found:
